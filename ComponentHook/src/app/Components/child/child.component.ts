@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges,SimpleChange } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -8,9 +8,9 @@ import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 export class ChildComponent implements OnInit {
 @Input() emp: any;
 @Input() counterNewValue: number;
-// currentValue: number;
-// previousValue: number;
-// FirstChange: boolean;
+currentValue:SimpleChange;
+previousValue: SimpleChange;
+firstChanges: boolean
   constructor() { 
     console.log("Constructor of Child Component!!");
   }
@@ -23,9 +23,13 @@ ngDoCheck()
   console.log('1. DoCheck Executed!!!')
 }
 
-ngOnChanges()
+ngOnChanges(changes: SimpleChanges)
 {
-  console.log("Something has Changed");
+  this.currentValue=changes['counterNewValue'].currentValue;
+  console.log(this.currentValue);
+this.previousValue=changes['counterNewValue'].previousValue;
+this.firstChanges=changes['firstChanges'].firstChange;
+  console.log("ngOnChanges has Executed");
 }
 ngAfterContentChecked()
 {
