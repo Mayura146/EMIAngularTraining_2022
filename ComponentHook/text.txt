@@ -15,3 +15,10 @@ currentvalue,previousvalue,firstChange()
 1. fetching data=> Component1
 2. Display data=> Component2
 3. Calculate Salary of Employees whose designation=> Manager=> Component3
+
+@Output Decorator
+EventEmitter
+@Output() EmpDetails =new EventEmitter();
+
+emit,subscribe
+this.emp.emit

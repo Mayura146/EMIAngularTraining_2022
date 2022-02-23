@@ -10,7 +10,7 @@ export class ChildComponent implements OnInit {
 @Input() counterNewValue: number;
 currentValue:SimpleChange;
 previousValue: SimpleChange;
-firstChanges: boolean
+firstChanges: boolean;
   constructor() { 
     console.log("Constructor of Child Component!!");
   }
