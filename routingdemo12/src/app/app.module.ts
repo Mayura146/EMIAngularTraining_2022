@@ -17,6 +17,7 @@ import { RouteParameterComponent } from './Components/route-parameter/route-para
 import { CustomerComponent } from './Components/customer/customer.component';
 import { CustomerDetailsComponent } from './Components/customer-details/customer-details.component';
 import { EditCustomerComponent } from './Components/edit-customer/edit-customer.component';
+import { AssignInitialPipe } from './SharedModule/assign-initial.pipe';
 
 @NgModule({
   declarations: [
@@ -30,13 +31,14 @@ import { EditCustomerComponent } from './Components/edit-customer/edit-customer.
     MenuComponent,
     CustomerDetailsComponent,
     PageNotFoundComponent,SwitchComponent,
-    EmployeeDetailsComponent,RouteParameterComponent, EditCustomerComponent
+    EmployeeDetailsComponent,RouteParameterComponent, EditCustomerComponent, AssignInitialPipe
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

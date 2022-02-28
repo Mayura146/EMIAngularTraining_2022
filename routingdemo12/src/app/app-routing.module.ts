@@ -22,8 +22,8 @@ const routes: Routes = [
   {path:'route/:id',component:RouteParameterComponent},
   {path:'employee',component:EmployeeComponent,children:[
     {path:'add',component:AddEmployeeComponent},
-    {path:'details/:id',component:EmployeeDetailsComponent},
-    {path: 'edit/:id',component:EmployeeDetailsComponent}
+    {path:'details',component:EmployeeDetailsComponent},
+    {path: 'edit',component:EmployeeDetailsComponent}
   ]},
   {path:'customer',component:CustomerComponent,children:[
     {path:'details/:id',component:CustomerDetailsComponent,children:[
