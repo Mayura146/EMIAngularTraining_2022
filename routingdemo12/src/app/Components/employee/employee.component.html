@@ -7,7 +7,8 @@ Slice:{{months|slice:2:6}}<br>
 Date Pipe: {{todaydate|date:'d/m/y'}}<br/>
 jsonValue:{{jsonValue|json}}
 <br/><br/>
-
+Search :<input type="text" [(ngModel)]="filterby">
+<!--<button (click)="filter()">Search</button>-->
 <h3> Employee Table</h3>
 <table class="table table-bordered">
     <thead>
@@ -20,7 +21,7 @@ jsonValue:{{jsonValue|json}}
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let employees of details">
+        <tr *ngFor="let employees of filteredList|search:filterby">
             <td>{{employees.id}}</td>
             <td>{{employees.name|uppercase|assignInitial: employees.gender}}</td>
                 <td>{{employees.location|titlecase}}</td>

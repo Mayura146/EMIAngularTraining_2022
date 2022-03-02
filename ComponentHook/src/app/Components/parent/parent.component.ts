@@ -16,11 +16,11 @@ export class ParentComponent implements OnInit {
   counter=0;
  
   constructor() {
-    console.log("Constructor of ParentComponent");
+    console.log(" ParentConstructor of ParentComponent");
    }
 
   ngOnInit(): void {
-    console.log("ngOninit of Parent Component");
+    console.log(" Parentng Oninit of Parent Component");
   }
 public  incremenent():void{
   this.counter++;
@@ -44,34 +44,34 @@ public updateDetails()
   }
 }
 
-// ngAfterViewInit()
-// {
-//   console.log('Parent get executed');
-// }
-// ngOnchanges()
-// {
-//   console.log("NgOnchanges")
-// }
+ngAfterViewInit()
+{
+  console.log('Parent ngAfterViewInit get executed');
+}
+ngOnchanges()
+{
+  console.log(" Parent NgOnchanges")
+}
 
-// ngDoCheck()
-// {
-//   console.log("NfDoCheck")
-// }
-// ngAfterContentInit()
-// {
-//   console.log("NgAfterContentInit")
-// }
-// ngOnDestroy()
-// {
-//   console.log("NgDestroy");
-// }
-// ngAfterViewChecked()
-// {
-//   console.log("ngAfterViewChedked")
-// }
-// ngAfterContentChecked()
-// {
-//   console.log("NgafterContentChecked");
-// }
+ngDoCheck()
+{
+  console.log(" Parent NfDoCheck")
+}
+ngAfterContentInit()
+{
+  console.log(" Parent NgAfterContentInit")
+}
+ngOnDestroy()
+{
+  console.log(" Parent NgDestroy");
+}
+ngAfterViewChecked()
+{
+  console.log(" Parent ngAfterViewChedked")
+}
+ngAfterContentChecked()
+{
+  console.log(" Parent NgafterContentChecked");
+}
 
 }

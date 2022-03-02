@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Employee } from 'src/app/Models/Employee.model';
 import { EmployeeService } from 'src/app/Services/employee.service';
 import { AssignInitialPipe } from 'src/app/SharedModule/assign-initial.pipe';
+import { SearchPipe } from 'src/app/SharedModule/search.pipe';
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
@@ -11,17 +13,20 @@ export class EmployeeComponent implements OnInit {
 months= ['jan','feb','march','april','may','june','july']
 todaydate=new Date();
 jsonValue={name:'Mayura',age:38,address:{city:'Bangalore',State:'Karnataka'}}
-details: any;
+details: Employee[];
 empid: number;
 ID:number;
 Name:string;
 location:string;
+filterby:string="";
+filteredList:Employee[];
 
   constructor(private activate: ActivatedRoute, private router: Router, private _empService:EmployeeService) { }
 
   ngOnInit(): void {
     this._empService.getEmployees().subscribe(response=>{
       this.details=response;
+      this.filteredList=this.details;
     })
   }
 
@@ -38,6 +43,11 @@ public getQueryParamData(): void{
   console.log(this.activate.snapshot.queryParamMap.keys);
 
 }
+//public filter()
+//{
+//  const searchpipe:SearchPipe = new SearchPipe();
+//  this.filteredList=searchpipe.transform(this.details,this.filterby);
+//}
 }
 
 

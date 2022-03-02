@@ -21,7 +21,7 @@ employees: Employee[]=[
   selectedEmployee: Employee=new Employee();
   public displayDetails(emp: Employee):void
   {
-   // this.selectedEmployee=emp;
+    //this.selectedEmployee=emp;
   this.selectedEmployee=Object.assign({},emp);
   }
 

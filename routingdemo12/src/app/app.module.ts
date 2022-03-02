@@ -18,6 +18,7 @@ import { CustomerComponent } from './Components/customer/customer.component';
 import { CustomerDetailsComponent } from './Components/customer-details/customer-details.component';
 import { EditCustomerComponent } from './Components/edit-customer/edit-customer.component';
 import { AssignInitialPipe } from './SharedModule/assign-initial.pipe';
+import { SearchPipe } from './SharedModule/search.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { AssignInitialPipe } from './SharedModule/assign-initial.pipe';
     MenuComponent,
     CustomerDetailsComponent,
     PageNotFoundComponent,SwitchComponent,
-    EmployeeDetailsComponent,RouteParameterComponent, EditCustomerComponent, AssignInitialPipe
+    EmployeeDetailsComponent,RouteParameterComponent, EditCustomerComponent, AssignInitialPipe, SearchPipe
     
   ],
   imports: [
