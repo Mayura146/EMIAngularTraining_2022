@@ -8,6 +8,11 @@ Date Pipe: {{todaydate|date:'d/m/y'}}<br/>
 jsonValue:{{jsonValue|json}}
 <br/><br/>
 
+
+<input type="text" style="width: 200px;" class="form-Control" id="search"
+ placeholder="Serach employee by Name" [(ngModel)]="SearchFilter"><br>
+ <input type="text" style="width: 200px;" class="form-Control" id="search"
+ placeholder="Serach employee by ID" [(ngModel)]="SearchId">
 <h3> Employee Table</h3>
 <table class="table table-bordered">
     <thead>
@@ -20,7 +25,7 @@ jsonValue:{{jsonValue|json}}
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let employees of details">
+        <tr *ngFor="let employees of details  | filter:SearchFilter| filterTest:SearchId ">
             <td>{{employees.id}}</td>
             <td>{{employees.name|uppercase|assignInitial: employees.gender}}</td>
                 <td>{{employees.location|titlecase}}</td>
@@ -46,5 +51,6 @@ jsonValue:{{jsonValue|json}}
    <button type="button" (click)="getQueryParamData()">Get Values</button> <br/>
    Employee ID: {{ID}}<br/>
    Name: {{Name}}<br/>
-   Location: {{location}} 
+   Location: {{location}} <br>
+   country:{{Country}}
    

@@ -8,6 +8,7 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 })
 export class RouteParameterComponent implements OnInit {
  Id:number;
+ IDTest:number;
  Name:string;
   constructor(private activate: ActivatedRoute,private router: Router) { }
 
@@ -15,10 +16,14 @@ export class RouteParameterComponent implements OnInit {
     this.activate.paramMap.subscribe((p:ParamMap)=>{
       this.Id=+p.get('id');
     })
+
+    this.activate.paramMap.subscribe((p:ParamMap)=>{
+      this.IDTest=+p.get('id');
+    })
   }
 
   public QueryParam()
   {
-    this.router.navigate(['employee'],{queryParams:{Id:345,Name:'Mayura'}})
+    this.router.navigate(['employee'],{queryParams:{ID:345,Name:'Mayura',Location:'Nashik',Country:'India'}})
   }
 }
