@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, PreloadingStrategy, RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './Components/about/about.component';
 import { AddCustomerComponent } from './Components/add-customer/add-customer.component';
 import { AddEmployeeComponent } from './Components/add-employee/add-employee.component';
@@ -12,6 +12,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 import { RouteParameterComponent } from './Components/route-parameter/route-parameter.component';
 import { SwitchComponent } from './Components/switch/switch.component';
+import { ProductDetailsComponent } from './FeatureModules/Product/products/Components/product-details/product-details.component';
 
 const routes: Routes = [
 
@@ -29,10 +30,14 @@ const routes: Routes = [
     {path:'details/:id',component:CustomerDetailsComponent,children:[
       {path:'add',component:AddCustomerComponent},
       {path:'edit/:id',component:EditCustomerComponent}
-    ]}
-  ]},
+    ]}]}
+    ,
+
+ {path:'product',loadChildren:()=> import('./FeatureModules/Product/products/products.module')
+ .then(m=>m.ProductsModule)},
   {path: '**',component:PageNotFoundComponent}
-];
+
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

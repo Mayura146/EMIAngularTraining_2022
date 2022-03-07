@@ -18,6 +18,10 @@ import { CustomerComponent } from './Components/customer/customer.component';
 import { CustomerDetailsComponent } from './Components/customer-details/customer-details.component';
 import { EditCustomerComponent } from './Components/edit-customer/edit-customer.component';
 import { AssignInitialPipe } from './SharedModule/assign-initial.pipe';
+import { ProductDetailsComponent } from './FeatureModules/Product/products/Components/product-details/product-details.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -38,6 +42,8 @@ import { AssignInitialPipe } from './SharedModule/assign-initial.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule
+
+ 
   
   ],
   providers: [],
