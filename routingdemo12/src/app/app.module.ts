@@ -18,10 +18,15 @@ import { CustomerComponent } from './Components/customer/customer.component';
 import { CustomerDetailsComponent } from './Components/customer-details/customer-details.component';
 import { EditCustomerComponent } from './Components/edit-customer/edit-customer.component';
 import { AssignInitialPipe } from './SharedModule/assign-initial.pipe';
+<<<<<<< HEAD
 import { ProductDetailsComponent } from './FeatureModules/Product/products/Components/product-details/product-details.component';
 
 
 
+=======
+import { FilterPipe } from './SharedModule/filter.pipe';
+import { FilterTestPipe } from './SharedModule/filter-test.pipe';
+>>>>>>> 4fe54237e26f59ac8621b720639c99a49648e9c0
 
 @NgModule({
   declarations: [
@@ -35,7 +40,7 @@ import { ProductDetailsComponent } from './FeatureModules/Product/products/Compo
     MenuComponent,
     CustomerDetailsComponent,
     PageNotFoundComponent,SwitchComponent,
-    EmployeeDetailsComponent,RouteParameterComponent, EditCustomerComponent, AssignInitialPipe
+    EmployeeDetailsComponent,RouteParameterComponent, EditCustomerComponent, AssignInitialPipe, FilterPipe, FilterTestPipe
     
   ],
   imports: [

@@ -16,6 +16,9 @@ empid: number;
 ID:number;
 Name:string;
 location:string;
+Country:string;
+SearchFilter: any ='';
+SearchId:any='';
 
   constructor(private activate: ActivatedRoute, private router: Router, private _empService:EmployeeService) { }
 
@@ -34,6 +37,8 @@ public getQueryParamData(): void{
 
   this.ID= +this.activate.snapshot.queryParamMap.get('ID');
   this.Name=this.activate.snapshot.queryParamMap.get('Name');
+  this.Country=this.activate.snapshot.queryParamMap.get('Country');
+  this.location=this.activate.snapshot.queryParamMap.get('Location');
   console.log(this.activate.snapshot.queryParamMap.has('ID'));
   console.log(this.activate.snapshot.queryParamMap.keys);
 
