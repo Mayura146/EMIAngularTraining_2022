@@ -7,6 +7,7 @@ import { AddEmployeeComponent } from './FeatureModules/Employee/EmployeeModule/a
 import { EditEmployeeComponent } from './FeatureModules/Employee/EmployeeModule/edit-employee/edit-employee.component';
 import { DeleteEmployeeComponent } from './FeatureModules/Employee/EmployeeModule/delete-employee/delete-employee.component';
 import { EmployeeListComponent } from './FeatureModules/Employee/EmployeeModule/employee-list/employee-list.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { EmployeeListComponent } from './FeatureModules/Employee/EmployeeModule/
     AddEmployeeComponent,
     EditEmployeeComponent,
     DeleteEmployeeComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

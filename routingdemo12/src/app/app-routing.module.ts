@@ -35,6 +35,9 @@ const routes: Routes = [
 
  {path:'product',loadChildren:()=> import('./FeatureModules/Product/products/products.module')
  .then(m=>m.ProductsModule)},
+ {path:'product',loadChildren:()=> import('./FeatureModules/Employee/employees.module')
+ .then(m=>m.EmployeesModule)},
+
   {path: '**',component:PageNotFoundComponent}
 
   ];
