@@ -41,20 +41,6 @@
       "id": 6
     },
     {
-      "name": "m@gmail.com",
-      "designation": "fgfdg",
-      "department": "gfdg",
-      "gender": "m",
-      "id": 7
-    },
-    {
-      "name": "dsfdsf",
-      "designation": "fdsfds",
-      "department": "fdf",
-      "gender": "male",
-      "id": 8
-    },
-    {
       "name": "Anagha",
       "designation": "Manager",
       "department": "Dev",
@@ -69,11 +55,39 @@
       "id": 10
     },
     {
-      "name": "rewr",
-      "designation": "rwer",
-      "department": "werew",
-      "gender": "werwe",
+      "name": "erew",
+      "designation": "erwewr",
+      "department": "erwer",
+      "gender": "werwer",
       "id": 11
+    },
+    {
+      "name": "Shyam",
+      "designation": "MAnager",
+      "department": "Sales",
+      "gender": "Male",
+      "id": 12
+    },
+    {
+      "name": "dsd",
+      "designation": "dsa",
+      "department": "dsa",
+      "Gender": "dsad",
+      "id": 13
+    },
+    {
+      "name": "fdf",
+      "designation": "dfds",
+      "department": "dfsdf",
+      "gender": "fddsf",
+      "id": 14
+    },
+    {
+      "name": "qqq",
+      "designation": "qqq",
+      "department": "qqq",
+      "gender": "qqq",
+      "id": 15
     }
   ]
 }

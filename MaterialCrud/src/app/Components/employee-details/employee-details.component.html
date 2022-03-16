@@ -1,0 +1,21 @@
+<div class="example-container mat-elevation-z8">
+    <div class="example-loading-shade">
+
+    </div>
+
+    <div class="button-row">
+        <a mat-flat-button color="primary" [routerLink]="['/list']"><mat-icon>list</mat-icon></a>
+
+    </div>
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title><h3>{{emp.name}}</h3></mat-card-title>
+            <mat-card-title><h3>{{emp.designation}}</h3></mat-card-title>
+            <mat-card-title><h3>{{emp.department}}</h3></mat-card-title>
+            <mat-card-title><h3>{{emp.gender}}</h3></mat-card-title>
+        </mat-card-header>
+        
+            <a mat-flat-button color="primary" (click)="delete(emp.id)"><mat-icon>delete</mat-icon></a>
+        
+    </mat-card>
+    </div>

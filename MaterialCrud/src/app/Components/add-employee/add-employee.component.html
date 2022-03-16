@@ -1,0 +1,49 @@
+<div class="example-container mat-elevation-z8">
+    <div class="example-loading-shade">
+
+    </div>
+
+    <div class="button-row">
+        <a mat-flat-button color="primary" [routerLink]="['/list']"><mat-icon>list</mat-icon></a>
+
+    </div>
+
+    <mat-card class="example-card">
+        <form [formGroup]="empForm" (ngSubmit)="onFormSubmit(empForm.value)">
+            <mat-form-field>
+                <input matInput placeholder="Enter Employee Name" formControlName="name">
+                <!-- [errorStateMatcher]="matcher"> -->
+                <mat-error>
+                    <span *ngIf="!empForm.get('name')?.valid && empForm.get('name')?.touched">Name Required</span>
+                </mat-error>
+            </mat-form-field>
+
+          
+            <mat-form-field>
+                <input matInput  formControlName="department">
+                <!-- [errorStateMatcher]="matcher"> -->
+                <mat-error>
+                    <span *ngIf="!empForm.get('department')?.valid && empForm.get('department')?.touched">Department Required</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Enter Employee designation" formControlName="designation">
+                <!-- [errorStateMatcher]="matcher"> -->
+                <mat-error>
+                    <span *ngIf="!empForm.get('designation')?.valid && empForm.get('designation')?.touched">designation Required</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput  formControlName="gender">
+               
+                <mat-error>
+                    <span *ngIf="!empForm.get('gender')?.valid && empForm.get('gender')?.touched"> Gender Required</span>
+                </mat-error>
+            </mat-form-field>
+            <div class="button-row">
+                <button mat-flat-button color="primary" type="submit" [disabled]="!empForm.valid"><mat-icon>save</mat-icon></button>
+            </div>
+        </form>
+    </mat-card>
+    </div>

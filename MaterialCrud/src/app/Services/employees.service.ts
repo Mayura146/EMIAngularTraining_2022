@@ -34,7 +34,7 @@ export class EmployeesService {
     return this.http.get<Employee>(url).pipe(catchError(this.handleError));
   }
 
-  public addEmployee(emp:Employee):Observable<Employee>{
+  public addEmployee(emp:any):Observable<Employee>{
     return this.http.post<Employee>(this.baseUrl,emp);
   }
 
