@@ -7,6 +7,7 @@ import { AuthService } from '../Services/auth.service';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate,CanActivateChild {
+  alertmessage="You dont have access to this page.Please Login!!"
 
   constructor(private service:AuthService,private router:Router){}
   canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean  {
@@ -19,10 +20,13 @@ export class AuthGuard implements CanActivate,CanActivateChild {
       if(!this.service.isAuthenticated)
       {
      //this.router.navigate(['404']);
+     alert(this.alertmessage);
+ this.router.navigate(['admin']);
      return false;
       }
   return true;
   }
+  }
 
  
-}
+
