@@ -1,3 +1,4 @@
+import { IfStmt } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -22,6 +23,19 @@ export class AuthService {
     else
     {
       return false;
+    }
+  }
+
+  public canExit():boolean
+  {
+    if(confirm("Do you want to leave this page.Confirm"))
+    {
+      return true;
+    }
+
+    else
+    {
+      return true;
     }
   }
 }

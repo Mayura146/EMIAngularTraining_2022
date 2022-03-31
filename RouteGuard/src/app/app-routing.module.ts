@@ -15,12 +15,16 @@ const routes: Routes = [
   {path:'admin',component:AdminComponent},
   {path:'404',component:PageNotFoundComponent},
   {path:'user',component:UsersComponent,canActivate:[AuthGuard]},
-  {path:'dashboard',component:DashboardComponent,children:[
+  {path:'dashboard',component:DashboardComponent,canActivateChild:[AuthGuard],children:[
     {path:'add',component:AddEmployeeComponent},
     {path:'delete',component:DeleteEmployeeComponent},
     {path:'edit',component:EditEmployeeComponent}
   ]},
-  {path:'profile',component:ProfileComponent}
+  {path:'profile',component:ProfileComponent,canDeactivate:[AuthGuard]},
+  {path:'product',loadChildren:()=>import('./FeatureModules/product/product.module')
+  .then(module=>module.ProductModule),canLoad:[AuthGuard]
+ 
+}
 ];
 
 @NgModule({

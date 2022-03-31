@@ -13,6 +13,7 @@ import { AddEmployeeComponent } from './Components/add-employee/add-employee.com
 import { DeleteEmployeeComponent } from './Components/delete-employee/delete-employee.component';
 import { EditEmployeeComponent } from './Components/edit-employee/edit-employee.component';
 import { ProfileComponent } from './Components/profile/profile.component';
+import { ProductDetailsComponent } from './FeatureModules/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProfileComponent } from './Components/profile/profile.component';
     AddEmployeeComponent,
     DeleteEmployeeComponent,
     EditEmployeeComponent,
-    ProfileComponent
+    ProfileComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
