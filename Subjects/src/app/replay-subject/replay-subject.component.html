@@ -1,0 +1,38 @@
+<div>
+    <h2>Replay Subject</h2>
+    <br/>
+    <div>
+        <h3>Add Video</h3>
+    </div>
+    <hr>
+    <div>
+        <input type="text" class="form-control" #video>
+        
+    </div>
+    <div>
+        <button class="btn btn-success" (click)="onVideoAdd(video.value)">Add Video</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-3">
+        <strong style="color:blueviolet">User -01</strong>
+        <hr>
+        <ul>
+            <li *ngFor="let list of User1List">
+                <strong>Video</strong>:{{list}}
+        </ul>
+    </div>
+<div class="col-md-3">
+    <strong style="color:brown">User-02</strong>
+    <hr>
+        <ul>
+            <li *ngFor="let list of User2List">
+                <strong>Video</strong>:{{list}}
+        </ul>
+        <button class="btn" [ngClass]="subscribeuser2? 'btn-danger':'btn-success'" (click)="user2Subscribe()">
+            {{subscribeuser2? 'Unsubscribe':'Subscribe'}}</button>
+
+</div>
+
+</div>

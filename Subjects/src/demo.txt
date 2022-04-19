@@ -1,0 +1,30 @@
+
+Rxjs=> 
+
+Observable
+Observer=> 
+component=> subscriber
+
+
+Observable=> subscribe
+Subject=>
+Observer=>
+
+
+Subjects:
+ 1. subscribe, next(),error(),complete(),observer[],
+
+ Observable=> subscribe()
+
+ observer=> next(),complete(),error()
+ 
+
+
+
+
+Subject
+Behaviour
+Replay
+Async Subject
+
+subscribe , next,error,complete
